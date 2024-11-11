@@ -1,6 +1,6 @@
 {
   "name": "trool",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "a spreadsheet rule engine for NodeJS/TypeScript",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -11,6 +11,8 @@
     "clean-install": "rm -rf ./node_modules && rm -r package-lock.json && npm i",
     "lint": "eslint --flag unstable_ts_config",
     "build": "rm -rf ./dist/ && tsc -p tsconfig.build.json",
+    "pre-publish": "mv README.md README-git && mv README-npm README.md",
+    "post-publish": "mv README.md README-npm && mv README-git README.md",
     "test": "vitest",
     "test:visitors": "ts-node ./test/VisitorRules/playground.ts",
     "test:nightclub": "ts-node ./test/NightClubRules/playground.ts"

@@ -5,6 +5,8 @@ tsconfig.json
 tsconfig.build.json
 images/
 test/
+README-git
+README-npm
 
 # Ignore dev files
 lib/*.ts
